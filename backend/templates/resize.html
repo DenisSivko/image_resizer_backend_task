@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}{{ image.name }}{% endblock %}
+
+{% block content %}
+  <div>
+    <a href="{% url 'index' %}">На главную</a>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Изменить</button>
+    </form>
+    <h1>Изображение:</h1>
+    {{ image.name }}
+    <br>
+    <img src="{{ image.picture.url }}">
+    <br>
+  </div>
+{% endblock %}

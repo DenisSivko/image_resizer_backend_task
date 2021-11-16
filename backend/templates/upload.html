@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Загрузить картинку{% endblock %}
+
+{% block content %}
+  <a href="{% url 'index' %}">На главную страницу</a>
+  <div>
+    <h1>Добавить изображение</h1>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+  <br>
+{% endblock %}

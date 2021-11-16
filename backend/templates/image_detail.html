@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+  <a href="{% url 'index' %}">На главную страницу</a>
+  <br>
+  <br>
+  <a href="{% url 'resize' pk=image.pk %}">Изменить размер изображения</a>
+  <h1>Изображение:</h1>
+  {{ image.name }}
+  <br>
+  <img src="{{ image.picture.url }}">
+  <br>
+{% endblock %}

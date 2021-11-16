@@ -1,0 +1,5 @@
+/backend/media/
+/backend/static/
+/.idea/
+__pycache__
+venv/
