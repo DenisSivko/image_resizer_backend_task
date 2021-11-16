@@ -70,9 +70,6 @@ FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
 
 WSGI_APPLICATION = "config.wsgi.application"
 
-a = os.environ.get("POSTGRES_PASSWORD")
-print(a)
-
 # Database
 DATABASES = {
     "default": {
@@ -85,12 +82,6 @@ DATABASES = {
         "CONN_MAX_AGE": 600,
     }
 }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
