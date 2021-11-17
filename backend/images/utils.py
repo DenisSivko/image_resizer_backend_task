@@ -28,7 +28,7 @@ def resize_image(image, width, height):
         image_name = f"{image.name}_0_{height}"
     elif height is None:
         height = image.height
-        image_name = f"{image.name}_{width}_{0}"
+        image_name = f"{image.name}_{width}_0"
     else:
         image_name = f"{image.name}_{width}_{height}"
     source_image = Image.open(image.picture)
